@@ -2,11 +2,11 @@ package org.ulpgc.is1.model;
 
 import java.util.Date;
 
-public class Contact {
+public class Contract {
     public Date start, end;
     public int budget;
 
-    public Contact(Date start, Date end, int budget) {
+    public Contract(Date start, Date end, int budget) {
         this.start = start;
         this.end = end;
         this.budget = budget;

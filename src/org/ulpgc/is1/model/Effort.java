@@ -3,12 +3,12 @@ package org.ulpgc.is1.model;
 public class Effort {
     Employee employee;
     Task task;
-    public int aumount;
+    public int amount;
 
-    public Effort(Employee employee, Task task, int aumount) {
+    public Effort(Employee employee, Task task, int amount) {
         this.employee = employee;
         this.task = task;
-        this.aumount = aumount;
+        this.amount = amount;
     }
 
     public Employee getEmployee() {
@@ -27,11 +27,11 @@ public class Effort {
         this.task = task;
     }
 
-    public int getAumount() {
-        return aumount;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setAumount(int aumount) {
-        this.aumount = aumount;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 }

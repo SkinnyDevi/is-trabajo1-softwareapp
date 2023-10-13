@@ -7,9 +7,8 @@ public class Task {
     public String name, description;
     public Date start, end;
 
-    Effort effort;
-
-    TaskType type;
+    private Effort effort;
+    private TaskType type;
 
     public Task(String name, String description, Date start, Date end, TaskType type) {
         this.name = name;
