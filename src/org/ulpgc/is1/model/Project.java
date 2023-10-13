@@ -8,14 +8,16 @@ public class Project {
     public final int id;
     public String name, description;
     public ProjectType type;
+    public Customer customer;
 
     // private List<Task> projectTasks = new ArrayList<>();
 
-    public Project(String name, String description, ProjectType type) {
+    public Project(String name, String description, ProjectType type, Customer customer) {
         this.id = NEXT_ID++;
         this.name = name;
         this.description = description;
         this.type = type;
+        this.customer = customer;
     }
 
     public void addTask() {}

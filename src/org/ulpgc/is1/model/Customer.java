@@ -1,8 +1,13 @@
 package org.ulpgc.is1.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Customer {
     public String name, surname;
     public Phone phone;
+
+    private List<Project> customerProjects = new ArrayList<>();
 
     public Customer(String name, String surname, Phone phone) {
         this.name = name;
@@ -32,5 +37,13 @@ public class Customer {
 
     public void setPhone(Phone phone) {
         this.phone = phone;
+    }
+
+    public Project getProject(int index) {
+        return this.customerProjects.get(index);
+    }
+
+    public void addProject(Project project) {
+        this.customerProjects.add(project);
     }
 }
