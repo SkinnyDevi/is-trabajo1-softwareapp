@@ -3,8 +3,7 @@ package org.ulpgc.is1.model;
 import java.util.Date;
 
 public class Contact {
-    public Date start;
-    public Date end;
+    public Date start, end;
     public int budget;
 
     public Contact(Date start, Date end, int budget) {
