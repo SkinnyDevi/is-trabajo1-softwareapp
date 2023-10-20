@@ -1,8 +1,12 @@
 package org.ulpgc.is1.model;
 
+import java.util.ArrayList;
+
 public class Employee {
 
     public String name, email;
+
+    private ArrayList<Project> employeeProjects = new ArrayList<>();
 
     public Employee(String name, String email) {
         this.name = name;
@@ -23,6 +27,14 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void addProject(Project project) {
+        this.employeeProjects.add(project);
+    }
+
+    public void removeProject(Project project) {
+        this.employeeProjects.remove(project);
     }
 
 }

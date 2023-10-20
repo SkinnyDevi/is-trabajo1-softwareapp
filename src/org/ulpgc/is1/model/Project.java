@@ -22,6 +22,7 @@ public class Project {
         this.description = description;
         this.type = type;
         this.customer = customer;
+        this.customer.addProject(this);
     }
 
     public Customer getCustomer() {
@@ -41,11 +42,14 @@ public class Project {
     }
 
     public void addEmployee(Employee employee) {
+        employee.addProject(this);
         this.employees.add(employee);
     }
 
     public void removeEmployee(int index) {
-        this.employees.remove(index);
+        Employee employee = this.employees.get(index);
+        employee.removeProject(this);
+        this.employees.remove(employee);
     }
 
     public Employee getManager() {
