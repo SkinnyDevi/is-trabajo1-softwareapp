@@ -37,4 +37,10 @@ public class Employee {
         this.employeeProjects.remove(project);
     }
 
+    @Override
+    public String toString() {
+        return this.name + " - " +
+                this.email + " - " +
+                this.employeeProjects.toString();
+    }
 }
