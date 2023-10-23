@@ -25,6 +25,17 @@ public class Project {
         this.customer.addProject(this);
     }
 
+    @Override
+    public String toString() {
+        return this.id + " - " +
+                this.name + " - " +
+                this.description + "\n" +
+                this.type + " - " + this.customer.toString() + "\n" +
+                this.employees.toString() + "\n" +
+                this.manager.toString() + "\n" +
+                this.projectTasks.toString() + "\n";
+    }
+
     public Customer getCustomer() {
         return customer;
     }
