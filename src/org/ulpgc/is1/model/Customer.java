@@ -46,4 +46,11 @@ public class Customer {
     public void addProject(Project project) {
         this.customerProjects.add(project);
     }
+
+    @Override
+    public String toString() {
+        return this.name + " - " +
+                this.surname + " - " +
+                this.phone + " - ";
+    }
 }
