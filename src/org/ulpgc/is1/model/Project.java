@@ -27,13 +27,13 @@ public class Project {
 
     @Override
     public String toString() {
-        return this.id + " - " +
-                this.name + " - " +
-                this.description + "\n" +
-                this.type + " - " + this.customer.toString() + "\n" +
-                this.employees.toString() + "\n" +
-                this.manager.toString() + "\n" +
-                this.projectTasks.toString() + "\n";
+        return "Infomacion del proyecto: " + this.name + "\n" +
+                "Descripcion: " + this.description + "\n" +
+                "Tipo: " + this.type + "\n" +
+                "Cliente: " + this.customer.toString() + "\n" +
+                "Empleados: " + this.employees.toString() + "\n" +
+                "Manager: " + this.manager.toString() + "\n" +
+                "Tareas: " + this.projectTasks.size();
     }
 
     public Customer getCustomer() {
@@ -41,11 +41,25 @@ public class Project {
     }
 
     public void addTask(String name, String description, Date start, Date end, TaskType type) {
-        this.projectTasks.add(new Task(name, description, start, end, type));
+        Task newTask = new Task(name, description, start, end, type);
+        if (Utilities.checkTaskExists(newTask, this.projectTasks)) {
+            System.out.println("Ya existe una tarea con este proyecto");
+            return;
+        }
+
+        this.projectTasks.add(newTask);
+    }
+
+    public void addEffortToTask(Employee employee, int taskIndex, int amount) {
+        this.getTask(taskIndex).addEffort(employee, amount);
     }
 
     public Task getTask(int index) {
         return this.projectTasks.get(index);
+    }
+
+    public ArrayList<Task> allTasks() {
+        return new ArrayList<>(this.projectTasks);
     }
 
     public Employee getEmployee(int index) {

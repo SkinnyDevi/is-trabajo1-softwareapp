@@ -40,9 +40,6 @@ public class Employee {
     @Override
     public String toString() {
         return this.name + " - " +
-                this.email + " - " +
-                this.employeeProjects.toString();
+                this.email;
     }
-
-
 }

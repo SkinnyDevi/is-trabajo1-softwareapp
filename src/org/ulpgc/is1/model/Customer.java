@@ -51,6 +51,6 @@ public class Customer {
     public String toString() {
         return this.name + " - " +
                 this.surname + " - " +
-                this.phone + " - ";
+                this.phone.number;
     }
 }

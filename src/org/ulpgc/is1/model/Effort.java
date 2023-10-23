@@ -35,4 +35,9 @@ public class Effort {
         this.amount = amount;
     }
 
+    @Override
+    public String toString() {
+        return "Empleado: " + this.employee.name + ", esfuerzo: " + this.amount +
+                ", tarea: " + this.task.name;
+    }
 }

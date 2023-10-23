@@ -62,4 +62,13 @@ public class Task {
         this.effort =  new Effort(employee, this, amount);
     }
 
+    @Override
+    public String toString() {
+        return "Nombre de tarea: " + this.name + "\n" +
+                "Descripcion: " + this.description + "\n" +
+                "Fecha comienzo: " + this.start.toString() + "\n" +
+                "Fecha fin: " + this.end.toString() + "\n" +
+                "Tipo de tarea: " + this.type + "\n" +
+                "Esfuerzo: " + this.effort.toString();
+    }
 }

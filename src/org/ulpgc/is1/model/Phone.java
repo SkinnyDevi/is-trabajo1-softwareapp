@@ -5,10 +5,18 @@ public class Phone {
 
     public Phone(String number) {
         this.number = number;
+        this.number = this.isValid() ? this.number : "XXXX";
     }
 
     public boolean isValid() {
-        return true;
+        if (this.number.length() != 9) return false;
+
+        try {
+            Integer.parseInt(this.number);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     public String getNumber() {
