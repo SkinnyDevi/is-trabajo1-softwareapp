@@ -24,6 +24,6 @@ public class Phone {
     }
 
     public void setNumber(String number) {
-        this.number = number;
+        this.number = this.isValid() ? number : "XXXX";
     }
 }
